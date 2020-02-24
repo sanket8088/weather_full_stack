@@ -10,4 +10,4 @@ A seperate microservice for UI and API to find weather of city by redirecting it
 Open browser with port 8001 and enter the name of city.
 
 # How it operates
-The city name is send to a google search by adding "string". The first url is extracted and a pop up appears on the browse with permission to redirect. Once you hit ok it will be redirected to another website
+The city name is send to a google search by adding as tring "weather". The first url is extracted and a pop up appears on the browse with permission to redirect. Once you hit ok it will be redirected to another website
