@@ -1,0 +1,43 @@
+<head></head>
+<h1>Helloooo</h1>
+
+<div id="content">
+    <input id="city_name" placeholder="Enter the city name">
+</div>
+<br>
+<div id="submit">
+    <button id="submit_btn"> Submit city name</button>
+</div>
+
+<p>
+
+</p>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js">
+</script>
+<script>
+    $("#submit_btn").click(function () {
+        gathercity()
+
+    })
+
+    function gathercity() {
+        var city_name = $("#city_name").val()
+
+        $.ajax({
+            url: "/city/name/",
+            type: "post",
+            data: city_name,
+            success: function (d) {
+                if (d.status == 400) {
+                    alert("Invalid city name")
+                    return false;
+                } else {
+                    alert("Redirected")
+                    window.location.href = d.link;
+                }
+            }
+        });
+    };
+
+
+</script>
